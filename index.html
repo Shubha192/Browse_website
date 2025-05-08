@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="branch-animations.css">
     <link rel="stylesheet" href="cse-background.css">
     <link rel="stylesheet" href="robot-animation.css">
+    <link rel="stylesheet" href="events-animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +22,8 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <img src="img/logo.png" alt="BROWSE 2025 Logo">
+                <img src="img/sit-logo.jpg" alt="SIT Logo" class="sit-logo">
+                <img src="img/browse-logo.jpg" alt="BROWSE 2025 Logo" class="browse-logo">
                 <span>BROWSE 2025</span>
             </div>
             <ul class="nav-links">
@@ -76,8 +78,11 @@
         <div class="hero-content">
             <h1 class="glitch-text" data-text="BROWSE 2025">BROWSE 2025</h1>
             <h2>A National Level Technical Symposium</h2>
-            <p>Hosted by the Association of CSE, ISE, MCA, AI&DS and CSE(AI&ML)</p>
+            <p>Hosted by the Association of CSE, ISE, AI&DS and CSE(AI&ML)</p>
             <p class="event-date">May 20th, 2025</p>
+            <div class="prize-pool-animated glitch-text-prize" data-text="Win Big! Rs. 75,000/- Prize Pool Awaits!">
+                Win Big! Rs. 75,000/- Prize Pool Awaits!
+            </div>
             <div class="countdown-container">
                 <div class="countdown-item">
                     <span id="days">00</span>
@@ -96,7 +101,10 @@
                     <span class="countdown-label">Seconds</span>
                 </div>
             </div>
-            <a href="#register" class="btn btn-primary">Register Now</a>
+            <div class="hero-buttons">
+                <a href="#register" class="btn btn-primary">Register Now</a>
+                <a href="#events" class="btn btn-secondary about-events-btn">About Events</a>
+            </div>
         </div>
         <div class="hero-visual">
             <div class="particle-container"></div>
@@ -112,7 +120,7 @@
                     <p>Our mission is to inspire the next generation of tech leaders and provide a platform for students to demonstrate their technical prowess through a variety of challenging and exciting events.</p>
                 </div>
                 <div class="about-image">
-                    <img src="img/about-image.jpg" alt="Tech students collaborating">
+                    <img src="img/event-poster.jpg" alt="BROWSE 2025 Event Poster" style="width:100%; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.2); animation: poster-fade-in 2s ease;">
                 </div>
             </div>
             <div class="institute-info">
@@ -148,16 +156,6 @@
                     <p>Focusing on information processing, data management, networking, and secure information systems.</p>
                 </div>
                 
-                <!-- MCA Branch Card -->
-                <div class="branch-card branch-mca">
-                    <div class="branch-animation app-windows"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Master of Computer Applications</h3>
-                    <p>Advanced study of application development, project management, and software solutions for business requirements.</p>
-                </div>
-                
                 <!-- AI&DS Branch Card -->
                 <div class="branch-card branch-aids">
                     <div class="branch-animation data-viz"></div>
@@ -182,47 +180,174 @@
     </section>
 
     <section id="events" class="events">
-        <div class="container">
-            <h2 class="section-title">Our <span>Events</span></h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-icon"><i class="fas fa-code"></i></div>
-                    <h3>Byte Surge</h3>
-                    <p>An intense programming contest that will test your coding skills and algorithmic thinking.</p>
-                    <a href="#" class="event-details">Learn More</a>
-                </div>
-                <div class="event-card">
-                    <div class="event-icon"><i class="fas fa-book"></i></div>
+        <div class="events-header" style="text-align:center; margin-bottom:2rem;">
+            <h2>BROWSE 2025</h2>
+            <h3>A National Level Technical Symposium</h3>
+            <div style="font-size:1.3rem; margin:0.5rem 0; color:#FFD700;">20th May 2025</div>
+            <div style="font-size:1.5rem; font-weight:bold; color:#00FF99;">Prize Pool: Rs. 75,000/-</div>
+            <div style="margin-top:0.5rem; color:#00BCD4;">For more details visit: <a href="https://browse.sit.ac.in" target="_blank">www.browse.sit.ac.in</a></div>
+        </div>
+        <div class="events-grid">
+            <!-- Cyber Etymology -->
+            <div class="event-card cyber-etymology">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="cyber-etymology-animation" class="lottie-container"></div>
+                    </div>
                     <h3>Cyber Etymology</h3>
-                    <p>Explore the derivation of technical terms from their origins in this unique word-based challenge.</p>
-                    <a href="#" class="event-details">Learn More</a>
+                    <p>Derivation of words from originals</p>
+                    <a href="#" class="event-details">Explore</a>
                 </div>
-                <div class="event-card">
-                    <div class="event-icon"><i class="fas fa-gamepad"></i></div>
-                    <h3>Life Extension</h3>
-                    <p>A gaming contest that combines strategy, skill, and quick thinking in a competitive environment.</p>
-                    <a href="#" class="event-details">Learn More</a>
-                </div>
-                <div class="event-card">
-                    <div class="event-icon"><i class="fas fa-question-circle"></i></div>
+            </div>
+            <!-- Technical Quiz -->
+            <div class="event-card technical-quiz">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="technical-quiz-animation" class="lottie-container"></div>
+                    </div>
                     <h3>Technical Quiz</h3>
-                    <p>Test your knowledge on various IT aspects and stay ahead in the tech-savvy world.</p>
-                    <a href="#" class="event-details">Learn More</a>
+                    <p>Quiz on IT aspects</p>
+                    <a href="#" class="event-details">Explore</a>
                 </div>
-                <div class="event-card">
-                    <div class="event-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3>Prastuti</h3>
-                    <p>Present your innovative technical papers and research work to a panel of expert judges.</p>
-                    <a href="#" class="event-details">Learn More</a>
+            </div>
+            <!-- Witty Byte -->
+            <div class="event-card witty-byte">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="witty-byte-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Witty Byte</h3>
+                    <p>Tech talk</p>
+                    <a href="#" class="event-details">Explore</a>
                 </div>
-                <div class="event-card">
-                    <div class="event-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>Tech Innovate</h3>
-                    <p>Showcase your innovative solutions to real-world problems in this creativity challenge.</p>
-                    <a href="#" class="event-details">Learn More</a>
+            </div>
+            <!-- Life Extension -->
+            <div class="event-card life-extension">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="life-extension-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Life Extension</h3>
+                    <p>Valorant &amp; BGMI</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Byte Surge -->
+            <div class="event-card byte-surge">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="byte-surge-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Byte Surge</h3>
+                    <p>Programming Contest</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- UI/UX Print (NEW) -->
+            <div class="event-card uiux-print">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="uiux-print-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>UI/UX Print <span class="new-badge">NEW</span></h3>
+                    <p>Building Web pages</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Pitchathon (NEW) -->
+            <div class="event-card pitchathon">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="pitchathon-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Pitchathon <span class="new-badge">NEW</span></h3>
+                    <p>Idea Presentations</p>
+                    <a href="#" class="event-details">Explore</a>
+                </div>
+            </div>
+            <!-- Hyperthon (NEW) -->
+            <div class="event-card hyperthon">
+                <div class="event-content">
+                    <div class="event-icon">
+                        <div id="hyperthon-animation" class="lottie-container"></div>
+                    </div>
+                    <h3>Hyperthon <span class="new-badge">NEW</span></h3>
+                    <p>A 3 hour Hackathon</p>
+                    <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
         </div>
+        <!-- Add Lottie Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+        <!-- Initialize Lottie Animations -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Cyber Etymology - Typewriter/Text Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('cyber-etymology-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Replace with typewriter/floating text animation
+                });
+                // Technical Quiz - Question Mark Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('technical-quiz-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets4.lottiefiles.com/packages/lf20_ydo1amjm.json' // Question mark animation
+                });
+                // Witty Byte - Tech Talk Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('witty-byte-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_2ks3pjua.json' // Microphone or talk animation
+                });
+                // Life Extension - Gaming Controller Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('life-extension-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets3.lottiefiles.com/packages/lf20_ydo1amjm.json' // Gaming controller animation
+                });
+                // Byte Surge - Coding Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('byte-surge-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Coding animation
+                });
+                // UI/UX Print - Web Design Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('uiux-print-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_1pxqjqps.json' // Web design animation
+                });
+                // Pitchathon - Idea/Presentation Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('pitchathon-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets5.lottiefiles.com/packages/lf20_ydo1amjm.json' // Presentation animation
+                });
+                // Hyperthon - Hackathon Animation
+                lottie.loadAnimation({
+                    container: document.getElementById('hyperthon-animation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: 'https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json' // Hackathon animation
+                });
+            });
+        </script>
     </section>
 
     <section id="schedule" class="schedule">
@@ -508,5 +633,6 @@
     <script src="branch-animations.js"></script>
     <script src="cse-background.js"></script>
     <script src="robot-animation.js"></script>
+    <script src="events-animations.js"></script>
 </body>
 </html> 
