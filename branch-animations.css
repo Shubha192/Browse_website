@@ -14,22 +14,25 @@
 
 .branches-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
+    padding-bottom: 1rem;
+    overflow-x: unset;
 }
 
 .branch-card {
-    background: rgba(22, 22, 30, 0.7);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    min-height: 350px;
+    justify-content: center;
+    background: rgba(22, 22, 30, 0.7);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     z-index: 1;
@@ -307,14 +310,4 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .branches-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .branch-card {
-        min-height: 300px;
-    }
-} 
+/* Removed media query to always keep branches in a single horizontal row */ 

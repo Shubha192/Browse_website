@@ -29,8 +29,8 @@
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#branches">Branches</a></li>
                 <li><a href="#events">Events</a></li>
+                <li><a href="#branches">Branches</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -131,62 +131,8 @@
         </div>
     </section>
 
-    <!-- New Branches Section with Animations -->
-    <section id="branches" class="branches-section">
-        <div class="container">
-            <h2 class="section-title branches-title">Participating <span>Branches</span></h2>
-            <div class="branches-grid">
-                <!-- CSE Branch Card -->
-                <div class="branch-card branch-cse">
-                    <div class="branch-animation code-particles"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Computer Science Engineering</h3>
-                    <p>Exploring the fundamentals of computing, algorithms, programming, and software engineering to build the digital world.</p>
-                </div>
-                
-                <!-- ISE Branch Card -->
-                <div class="branch-card branch-ise">
-                    <div class="branch-animation network-lines"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Information Science Engineering</h3>
-                    <p>Focusing on information processing, data management, networking, and secure information systems.</p>
-                </div>
-                
-                <!-- AI&DS Branch Card -->
-                <div class="branch-card branch-aids">
-                    <div class="branch-animation data-viz"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>AI & Data Science</h3>
-                    <p>Exploring data collection, analysis, and applying artificial intelligence to extract insights and patterns from complex datasets.</p>
-                </div>
-                
-                <!-- CSE(AI&ML) Branch Card -->
-                <div class="branch-card branch-ai-ml">
-                    <div class="branch-animation neural-network"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>CSE (AI & ML)</h3>
-                    <p>Specializing in artificial intelligence algorithms, machine learning models, and intelligent systems development.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="events" class="events">
-        <div class="events-header" style="text-align:center; margin-bottom:2rem;">
-            <h2>BROWSE 2025</h2>
-            <h3>A National Level Technical Symposium</h3>
-            <div style="font-size:1.3rem; margin:0.5rem 0; color:#FFD700;">20th May 2025</div>
-            <div style="font-size:1.5rem; font-weight:bold; color:#00FF99;">Prize Pool: Rs. 75,000/-</div>
-            <div style="margin-top:0.5rem; color:#00BCD4;">For more details visit: <a href="https://browse.sit.ac.in" target="_blank">www.browse.sit.ac.in</a></div>
-        </div>
+        <h2 class="section-title">Events</h2>
         <div class="events-grid">
             <!-- Cyber Etymology -->
             <div class="event-card cyber-etymology">
@@ -195,7 +141,6 @@
                         <div id="cyber-etymology-animation" class="lottie-container"></div>
                     </div>
                     <h3>Cyber Etymology</h3>
-                    <p>Derivation of words from originals</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -206,7 +151,6 @@
                         <div id="technical-quiz-animation" class="lottie-container"></div>
                     </div>
                     <h3>Technical Quiz</h3>
-                    <p>Quiz on IT aspects</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -217,7 +161,6 @@
                         <div id="witty-byte-animation" class="lottie-container"></div>
                     </div>
                     <h3>Witty Byte</h3>
-                    <p>Tech talk</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -228,7 +171,6 @@
                         <div id="life-extension-animation" class="lottie-container"></div>
                     </div>
                     <h3>Life Extension</h3>
-                    <p>Valorant &amp; BGMI</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -239,7 +181,6 @@
                         <div id="byte-surge-animation" class="lottie-container"></div>
                     </div>
                     <h3>Byte Surge</h3>
-                    <p>Programming Contest</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -250,7 +191,6 @@
                         <div id="uiux-print-animation" class="lottie-container"></div>
                     </div>
                     <h3>UI/UX Print <span class="new-badge">NEW</span></h3>
-                    <p>Building Web pages</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -261,7 +201,6 @@
                         <div id="pitchathon-animation" class="lottie-container"></div>
                     </div>
                     <h3>Pitchathon <span class="new-badge">NEW</span></h3>
-                    <p>Idea Presentations</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -272,7 +211,6 @@
                         <div id="hyperthon-animation" class="lottie-container"></div>
                     </div>
                     <h3>Hyperthon <span class="new-badge">NEW</span></h3>
-                    <p>A 3 hour Hackathon</p>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -348,6 +286,222 @@
                 });
             });
         </script>
+    </section>
+
+    <!-- Cyber Etymology Modal -->
+    <div id="cyberEtymologyModal" class="cyber-modal">
+      <div class="cyber-modal-content">
+        <button id="closeCyberEtymologyModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header cyber-header">
+          <h2>CYBER ETYMOLOGY</h2>
+          <div class="cyber-modal-subtitle">ETYMOLOGY: DERIVATION OF WORDS FROM ORIGINALS</div>
+        </div>
+        <ul class="cyber-modal-list">
+          <li><span class="cyber-bullet">&#9679;</span> It is a game of scrabble related to computer science.</li>
+          <li><span class="cyber-bullet">&#9679;</span> 3 members per team.</li>
+          <li><span class="cyber-bullet">&#9679;</span> The game comprises of two rounds: Prelims & Finals.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Each team will be given 5 characters, one at a time.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Words framed with given characters should be technical terms related to electronics and computers.</li>
+        </ul>
+        <div class="cyber-coordinators">
+          <div class="cyber-coord-card">
+            <strong>STUDENT CO-ORDINATORS</strong><br>
+            PRATYUSH CHATOLÉ: 88270 21191<br>
+            ARPIT ANAND: 79030 59740
+          </div>
+          <div class="cyber-coord-card">
+            <strong>FACULTY COORDINATOR</strong><br>
+            DR. NAGARATNA B CHITTARAGI<br>
+            96062 25604
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Quiz Modal -->
+    <div id="technicalQuizModal" class="cyber-modal">
+      <div class="cyber-modal-content">
+        <button id="closeTechnicalQuizModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header quiz-header">
+          <h2>TECHNICAL QUIZ</h2>
+        </div>
+        <ul class="cyber-modal-list">
+          <li><span class="cyber-bullet">&#9679;</span> 2 members per team.</li>
+          <li><span class="cyber-bullet">&#9679;</span> The <b>QUIZ</b> comprises of two rounds: Prelims & Finals.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Quiz will be based on facts of computer technology, famous personalities, industry logos and recent trends in IT.</li>
+        </ul>
+        <div class="cyber-coordinators">
+          <div class="cyber-coord-card">
+            <strong>FACULTY COORDINATOR</strong><br>
+            DR. PRASHANTH G K<br>
+            99809 33552
+          </div>
+          <div class="cyber-coord-card">
+            <strong>STUDENT CO-ORDINATORS</strong><br>
+            AMAN KUMAR: 95984 67385<br>
+            APARMEYA S: 82961 17794
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Byte Surge Modal -->
+    <div id="byteSurgeModal" class="cyber-modal">
+      <div class="cyber-modal-content">
+        <button id="closeByteSurgeModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header code-header">
+          <h2>BYTE SURGE</h2>
+        </div>
+        <ul class="cyber-modal-list">
+          <li><span class="cyber-bullet">&#9679;</span> It is a Programming contest.</li>
+          <li><span class="cyber-bullet">&#9679;</span> 2 members per team.</li>
+          <li><span class="cyber-bullet">&#9679;</span> The <b>BYTE SURGE</b> comprises of two rounds: Prelims & Finals.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Language: C or C++</li>
+        </ul>
+        <div class="cyber-coordinators">
+          <div class="cyber-coord-card">
+            <strong>FACULTY COORDINATOR</strong><br>
+            DR. SRINIVASA K<br>
+            98453 99083
+          </div>
+          <div class="cyber-coord-card">
+            <strong>STUDENT CO-ORDINATORS</strong><br>
+            J EKESHWAR: 93537 53183<br>
+            DEEKSHITH VAISHNAV: 93535 82173
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Life Extension Modal -->
+    <div id="lifeExtensionModal" class="cyber-modal">
+      <div class="cyber-modal-content">
+        <button id="closeLifeExtensionModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header game-header">
+          <h2>LIFE EXTENSION</h2>
+          <div class="cyber-modal-subtitle">GAMING CONTEST</div>
+        </div>
+        <ul class="cyber-modal-list">
+          <li><b>Valorant</b></li>
+          <li><span class="cyber-bullet">&#9679;</span> 5 members per team.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Players must bring their own laptops.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Internet facility will be provided.</li>
+          <li><b>BGMI</b></li>
+          <li><span class="cyber-bullet">&#9679;</span> 4 members per team.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Game will be played in custom rules created by the host.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Internet facility will be provided.</li>
+        </ul>
+        <div class="cyber-coordinators">
+          <div class="cyber-coord-card">
+            <strong>STUDENT CO-ORDINATORS</strong><br>
+            NISHANTH KUMAR: 73378 76335<br>
+            JITHESH KUMAR: 96067 75937
+          </div>
+          <div class="cyber-coord-card">
+            <strong>FACULTY COORDINATOR</strong><br>
+            DR. KIRAN KUMAR T M<br>
+            98443 79612
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Witty Byte Modal -->
+    <div id="wittyByteModal" class="cyber-modal">
+      <div class="cyber-modal-content">
+        <button id="closeWittyByteModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header talk-header">
+          <h2>WITTYBYTE</h2>
+          <div class="cyber-modal-subtitle">TECH TALK</div>
+        </div>
+        <ul class="cyber-modal-list">
+          <li><span class="cyber-bullet">&#9679;</span> It is an individual technical talk event.</li>
+          <li><span class="cyber-bullet">&#9679;</span> The <b>WITTYBYTE</b> comprises of four rounds.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Tech talk will be based on talk related to a topic scenario or an image given on the spot.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Usage of offensive words and violation of rules will result in immediate elimination.</li>
+        </ul>
+        <div class="cyber-coordinators">
+          <div class="cyber-coord-card">
+            <strong>STUDENT CO-ORDINATORS</strong><br>
+            ADARSH RAJESH: 91130 60130<br>
+            H S NAGENDRA HEBBAR: 86183 19835
+          </div>
+          <div class="cyber-coord-card">
+            <strong>FACULTY COORDINATOR</strong><br>
+            DR. ASHWINI B P<br>
+            99005 67454
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UI/UX Print Modal -->
+    <div id="uiuxPrintModal" class="cyber-modal">
+      <div class="cyber-modal-content">
+        <button id="closeUiuxPrintModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header design-header">
+          <h2>UI/UX PRINT</h2>
+        </div>
+        <ul class="cyber-modal-list">
+          <li><span class="cyber-bullet">&#9679;</span> Teams can use AI tools only as specified by the club. No other tools are allowed.</li>
+          <li><span class="cyber-bullet">&#9679;</span> A maximum of 10 prompts per AI tool is allowed.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Teams must call volunteers every time a prompt is made.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Participants must log into their own accounts and ensure AI tool history is saved.</li>
+          <li><span class="cyber-bullet">&#9679;</span> VS Code is mandatory for development.</li>
+          <li><span class="cyber-bullet">&#9679;</span> HTML, CSS, and JavaScript are compulsory; other frameworks may also be used.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Teams must share their GitHub report at the end of the build.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- New Branches Section with Animations -->
+    <section id="branches" class="branches-section">
+        <div class="container">
+            <h2 class="section-title branches-title">Participating <span>Branches</span></h2>
+            <div class="branches-grid">
+                <!-- CSE Branch Card -->
+                <div class="branch-card branch-cse">
+                    <div class="branch-animation code-particles"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Computer Science Engineering</h3>
+                </div>
+                
+                <!-- ISE Branch Card -->
+                <div class="branch-card branch-ise">
+                    <div class="branch-animation network-lines"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Information Science Engineering</h3>
+                </div>
+                
+                <!-- AI&DS Branch Card -->
+                <div class="branch-card branch-aids">
+                    <div class="branch-animation data-viz"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>AI & Data Science</h3>
+                </div>
+                
+                <!-- CSE(AI&ML) Branch Card -->
+                <div class="branch-card branch-ai-ml">
+                    <div class="branch-animation neural-network"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>CSE (AI & ML)</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="schedule" class="schedule">

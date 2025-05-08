@@ -7,7 +7,40 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initAnimations();
     initFormSubmissions();
+
+    // Cyber Etymology Modal logic
+    bindModal('.cyber-etymology .event-details', '#cyberEtymologyModal', '#closeCyberEtymologyModal');
+    // Technical Quiz Modal logic
+    bindModal('.technical-quiz .event-details', '#technicalQuizModal', '#closeTechnicalQuizModal');
+    // Byte Surge Modal logic
+    bindModal('.byte-surge .event-details', '#byteSurgeModal', '#closeByteSurgeModal');
+    // Life Extension Modal logic
+    bindModal('.life-extension .event-details', '#lifeExtensionModal', '#closeLifeExtensionModal');
+    // Witty Byte Modal logic
+    bindModal('.witty-byte .event-details', '#wittyByteModal', '#closeWittyByteModal');
+    // UI/UX Print Modal logic
+    bindModal('.uiux-print .event-details', '#uiuxPrintModal', '#closeUiuxPrintModal');
 });
+
+function bindModal(openSelector, modalSelector, closeSelector) {
+    const openBtn = document.querySelector(openSelector);
+    const modal = document.querySelector(modalSelector);
+    const closeBtn = document.querySelector(closeSelector);
+    if (openBtn && modal && closeBtn) {
+        openBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('show');
+        });
+        closeBtn.addEventListener('click', function() {
+            modal.classList.remove('show');
+        });
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    }
+}
 
 // Mobile Navigation Toggle
 function initNavbar() {
