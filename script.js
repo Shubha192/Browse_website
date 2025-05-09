@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     bindModal('.witty-byte .event-details', '#wittyByteModal', '#closeWittyByteModal');
     // UI/UX Print Modal logic
     bindModal('.uiux-print .event-details', '#uiuxPrintModal', '#closeUiuxPrintModal');
+    // Hyperthon Modal logic
+    bindModal('.hyperthon .event-details', '#hyperthonModal', '#closeHyperthonModal');
+    // Pitchathon Modal logic
+    bindModal('.pitchathon .event-details', '#pitchathonModal', '#closePitchathonModal');
 });
 
 function bindModal(openSelector, modalSelector, closeSelector) {

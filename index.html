@@ -21,18 +21,19 @@
     
     <header class="header">
         <nav class="navbar">
-            <div class="logo">
-                <img src="img/sit-logo.jpg" alt="SIT Logo" class="sit-logo">
-                <img src="img/browse-logo.jpg" alt="BROWSE 2025 Logo" class="browse-logo">
-                <span>BROWSE 2025</span>
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="img/sit-log.jpeg" alt="SIT Logo" style="height: 40px; margin-right: 12px;">
+                <a href="#home" style="display: flex; align-items: center;">
+                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo" style="height: 40px;">
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#branches">Branches</a></li>
                 <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#register">Register</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -120,7 +121,7 @@
                     <p>Our mission is to inspire the next generation of tech leaders and provide a platform for students to demonstrate their technical prowess through a variety of challenging and exciting events.</p>
                 </div>
                 <div class="about-image">
-                    <img src="img/event-poster.jpg" alt="BROWSE 2025 Event Poster" style="width:100%; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.2); animation: poster-fade-in 2s ease;">
+                    <img src="img/about-image.jpeg" alt="BROWSE 2025 Event Poster" style="width:100%; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.2); animation: poster-fade-in 2s ease;">
                 </div>
             </div>
             <div class="institute-info">
@@ -185,32 +186,35 @@
                 </div>
             </div>
             <!-- UI/UX Print (NEW) -->
-            <div class="event-card uiux-print">
+            <div class="event-card uiux-print" style="position: relative;">
+                <div class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 2px 5px; border-radius: 3px; font-size: 12px;">NEW!</div>
                 <div class="event-content">
                     <div class="event-icon">
                         <div id="uiux-print-animation" class="lottie-container"></div>
                     </div>
-                    <h3>UI/UX Print <span class="new-badge">NEW</span></h3>
+                    <h3>UI/UX Print</h3>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
             <!-- Pitchathon (NEW) -->
-            <div class="event-card pitchathon">
+            <div class="event-card pitchathon" style="position: relative;">
+                <div class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 2px 5px; border-radius: 3px; font-size: 12px;">NEW!</div>
                 <div class="event-content">
                     <div class="event-icon">
                         <div id="pitchathon-animation" class="lottie-container"></div>
                     </div>
-                    <h3>Pitchathon <span class="new-badge">NEW</span></h3>
+                    <h3>Pitchathon</h3>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
             <!-- Hyperthon (NEW) -->
-            <div class="event-card hyperthon">
+            <div class="event-card hyperthon" style="position: relative;">
+                <div class="new-badge" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 2px 5px; border-radius: 3px; font-size: 12px;">NEW!</div>
                 <div class="event-content">
                     <div class="event-icon">
                         <div id="hyperthon-animation" class="lottie-container"></div>
                     </div>
-                    <h3>Hyperthon <span class="new-badge">NEW</span></h3>
+                    <h3>Hyperthon</h3>
                     <a href="#" class="event-details">Explore</a>
                 </div>
             </div>
@@ -442,67 +446,101 @@
 
     <!-- UI/UX Print Modal -->
     <div id="uiuxPrintModal" class="cyber-modal">
-      <div class="cyber-modal-content">
+      <div class="cyber-modal-content" style="max-width: 480px; width: 95%;">
         <button id="closeUiuxPrintModal" class="cyber-modal-close">&times;</button>
         <div class="cyber-modal-bg"></div>
         <div class="cyber-modal-header design-header">
           <h2>UI/UX PRINT</h2>
         </div>
-        <ul class="cyber-modal-list">
-          <li><span class="cyber-bullet">&#9679;</span> Teams can use AI tools only as specified by the club. No other tools are allowed.</li>
-          <li><span class="cyber-bullet">&#9679;</span> A maximum of 10 prompts per AI tool is allowed.</li>
-          <li><span class="cyber-bullet">&#9679;</span> Teams must call volunteers every time a prompt is made.</li>
-          <li><span class="cyber-bullet">&#9679;</span> Participants must log into their own accounts and ensure AI tool history is saved.</li>
-          <li><span class="cyber-bullet">&#9679;</span> VS Code is mandatory for development.</li>
-          <li><span class="cyber-bullet">&#9679;</span> HTML, CSS, and JavaScript are compulsory; other frameworks may also be used.</li>
-          <li><span class="cyber-bullet">&#9679;</span> Teams must share their GitHub report at the end of the build.</li>
+        <ul class="cyber-modal-list" style="word-break: break-word; white-space: normal; font-size: 1.05rem; line-height: 1.6;">
+          <li>Teams can use AI tools only as specified by the club. No other tools are allowed.</li>
+          <li>A maximum of 10 prompts per AI tool is allowed.</li>
+          <li>Teams must call volunteers every time a prompt is made.</li>
+          <li>Participants must log into their own accounts and ensure AI tool history is saved.</li>
+          <li>VS Code is mandatory for development.</li>
+          <li>HTML, CSS, and JavaScript are compulsory; other frameworks may also be used.</li>
+          <li>Teams must share their GitHub report at the end of the build.</li>
         </ul>
+        <div class="cyber-coordinators" style="gap: 0.7rem;">
+          <div class="cyber-coord-card" style="word-break: break-word; white-space: normal; padding: 0.8rem 1rem; font-size: 0.98rem;">
+            <strong>Student coordinator</strong><br>
+            Ujwal Pai - 97316 36663<br>
+            Chaithra Aradhya - 81528 75878<br>
+            Shalmala G Nadig - 90192 81825
+          </div>
+          <div class="cyber-coord-card" style="word-break: break-word; white-space: normal; padding: 0.8rem 1rem; font-size: 0.98rem;">
+            <strong>Faculty coordinator</strong><br>
+            Dr Anupama T A<br>
+            99003 98122
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- New Branches Section with Animations -->
-    <section id="branches" class="branches-section">
-        <div class="container">
-            <h2 class="section-title branches-title">Participating <span>Branches</span></h2>
-            <div class="branches-grid">
-                <!-- CSE Branch Card -->
-                <div class="branch-card branch-cse">
-                    <div class="branch-animation code-particles"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Computer Science Engineering</h3>
-                </div>
-                
-                <!-- ISE Branch Card -->
-                <div class="branch-card branch-ise">
-                    <div class="branch-animation network-lines"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Information Science Engineering</h3>
-                </div>
-                
-                <!-- AI&DS Branch Card -->
-                <div class="branch-card branch-aids">
-                    <div class="branch-animation data-viz"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>AI & Data Science</h3>
-                </div>
-                
-                <!-- CSE(AI&ML) Branch Card -->
-                <div class="branch-card branch-ai-ml">
-                    <div class="branch-animation neural-network"></div>
-                    <div class="branch-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>CSE (AI & ML)</h3>
-                </div>
-            </div>
+    <!-- Hyperthon Modal -->
+    <div id="hyperthonModal" class="cyber-modal">
+      <div class="cyber-modal-content" style="max-width: 480px; width: 95%;">
+        <button id="closeHyperthonModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header design-header">
+          <h2>HYPERTHON</h2>
         </div>
-    </section>
+        <ul class="cyber-modal-list" style="word-break: break-word; white-space: normal; font-size: 1.05rem; line-height: 1.6;">
+          <li>Topics will be given on the spot.</li>
+          <li>No prework is allowed — development starts only after topic reveal.</li>
+          <li>Participants will have 3 hours to build the prototype.</li>
+          <li>Any and every AI tool is allowed during development.</li>
+          <li>A working prototype is mandatory for evaluation.</li>
+          <li>Individual participation only — no teams.</li>
+          <li>Participants must be able to explain the methodology and tech stack used.</li>
+        </ul>
+        <div class="cyber-coordinators" style="gap: 0.7rem;">
+          <div class="cyber-coord-card" style="word-break: break-word; white-space: normal; padding: 0.8rem 1rem; font-size: 0.98rem;">
+            <strong>Student coordinator</strong><br>
+            Ujwal Pai - 97316 36663<br>
+            Arshan Ali Khan - 82960 15593
+          </div>
+          <div class="cyber-coord-card" style="word-break: break-word; white-space: normal; padding: 0.8rem 1rem; font-size: 0.98rem;">
+            <strong>Faculty coordinator</strong><br>
+            R M Savithramma<br>
+            84958 22888
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pitchathon Modal -->
+    <div id="pitchathonModal" class="cyber-modal">
+      <div class="cyber-modal-content" style="max-width: 480px; width: 95%;">
+        <button id="closePitchathonModal" class="cyber-modal-close">&times;</button>
+        <div class="cyber-modal-bg"></div>
+        <div class="cyber-modal-header design-header">
+          <h2>PITCHATHON</h2>
+        </div>
+        <ul class="cyber-modal-list" style="word-break: break-word; white-space: normal; font-size: 1.05rem; line-height: 1.6;">
+          <li><span class="cyber-bullet">&#9679;</span> Team size: 3 to 4 participants.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Round 1: Present core idea via PPT.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Round 2: Submit a persuasive video pitch (for shortlisted teams).</li>
+          <li><span class="cyber-bullet">&#9679;</span> Round 3: Solve a surprise challenge under constraints.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Only PPT can be prepared in advance; all other work must be done during the event.</li>
+          <li><span class="cyber-bullet">&#9679;</span> All submissions must be original.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Decisions are final; clarity, innovation, and feasibility are key.</li>
+          <li><span class="cyber-bullet">&#9679;</span> Adhere to deadlines and maintain professional teamwork throughout.</li>
+        </ul>
+        <div class="cyber-coordinators" style="gap: 0.7rem;">
+          <div class="cyber-coord-card" style="word-break: break-word; white-space: normal; padding: 0.8rem 1rem; font-size: 0.98rem;">
+            <strong>Student coordinator</strong><br>
+            Raghavi M<br>78991 23195<br>
+            Akshitha Katte<br>96324 69914
+          </div>
+          <div class="cyber-coord-card" style="word-break: break-word; white-space: normal; padding: 0.8rem 1rem; font-size: 0.98rem;">
+            <strong>Faculty coordinator</strong><br>
+            Dr. Bhargavi K<br>
+            86182 03489
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="schedule" class="schedule">
         <div class="container">
@@ -568,6 +606,49 @@
         </div>
     </section>
 
+    <section id="branches" class="branches-section">
+        <div class="container">
+            <h2 class="section-title branches-title">Participating <span>Branches</span></h2>
+            <div class="branches-grid">
+                <!-- CSE Branch Card -->
+                <div class="branch-card branch-cse">
+                    <div class="branch-animation code-particles"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Computer Science Engineering</h3>
+                </div>
+                
+                <!-- ISE Branch Card -->
+                <div class="branch-card branch-ise">
+                    <div class="branch-animation network-lines"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Information Science Engineering</h3>
+                </div>
+                
+                <!-- AI&DS Branch Card -->
+                <div class="branch-card branch-aids">
+                    <div class="branch-animation data-viz"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>AI & Data Science</h3>
+                </div>
+                
+                <!-- CSE(AI&ML) Branch Card -->
+                <div class="branch-card branch-ai-ml">
+                    <div class="branch-animation neural-network"></div>
+                    <div class="branch-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>CSE (AI & ML)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="register" class="register">
         <div class="container">
             <h2 class="section-title">Register <span>Now</span></h2>
@@ -604,7 +685,7 @@
                             <input type="text" id="college" name="college" required placeholder="College/University">
                         </div>
                         <div class="form-group">
-                            <select id="event" name="event" required>
+                            <select id="event" name="event" required style="color: black;">
                                 <option value="" disabled selected>Select Event</option>
                                 <option value="byte-surge">Byte Surge</option>
                                 <option value="cyber-etymology">Cyber Etymology</option>
@@ -625,33 +706,37 @@
         </div>
     </section>
 
-    <section id="sponsors" class="sponsors">
+    <section id="coordinators" class="coordinators-section">
         <div class="container">
-            <h2 class="section-title">Our <span>Sponsors</span></h2>
-            <div class="sponsors-grid">
-                <div class="sponsor-item">
-                    <img src="img/sponsor1.png" alt="Sponsor 1">
+            <h2 class="section-title">Coordinators</h2>
+            <div class="coordinators-grid" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                    <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">PATRONS</h3>
+                    <div style="margin-bottom: 1rem;">
+                        Prof. SHIVAKUMARAIAH<br>CEO<br><br>
+                        Prof. S V DINESH<br>PRINCIPAL
+                    </div>
                 </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor2.png" alt="Sponsor 2">
+                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                    <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">PRESIDENT</h3>
+                    <div style="margin-bottom: 1rem;">
+                        Prof. N R SUNITHA<br>HOD, CSE
+                    </div>
                 </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor3.png" alt="Sponsor 3">
+                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                    <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">VICE-PRESIDENT</h3>
+                    <div style="margin-bottom: 1rem;">
+                        Prof. R APARNA<br>HOD, ISE
+                    </div>
                 </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor4.png" alt="Sponsor 4">
+                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                    <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">STUDENT CO-ORDINATORS</h3>
+                    <div style="margin-bottom: 1rem;">
+                        TUSHAR M SAGUR: 99724 01255<br>
+                        ABRAR AZEEM: 88677 37265<br>
+                        TARUN R: 99729 09371
+                    </div>
                 </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor5.png" alt="Sponsor 5">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor6.png" alt="Sponsor 6">
-                </div>
-            </div>
-            <div class="become-sponsor">
-                <h3>Interested in becoming a sponsor?</h3>
-                <p>Reach out to our sponsorship team to explore partnership opportunities for BROWSE 2025.</p>
-                <a href="#contact" class="btn btn-secondary">Contact Us</a>
             </div>
         </div>
     </section>
@@ -659,8 +744,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact <span>Us</span></h2>
-            <div class="contact-content">
-                <div class="contact-info">
+            <div class="contact-content" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                <div class="contact-info" style="flex: 1 1 300px;">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
@@ -670,6 +755,8 @@
                             <p>Karnataka, India</p>
                         </div>
                     </div>
+                </div>
+                <div class="contact-info" style="flex: 1 1 300px;">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -678,40 +765,6 @@
                             <p>info.browse2025@sit.ac.in</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+91 9876543210</p>
-                            <p>+91 8765432109</p>
-                        </div>
-                    </div>
-                    <div class="social-media">
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="contact-name" name="contact-name" required placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="contact-email" name="contact-email" required placeholder="Your Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="contact-subject" name="contact-subject" required placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="contact-message" name="contact-message" required placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -721,7 +774,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="img/logo.png" alt="BROWSE 2025 Logo">
+                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo">
                     <h3>BROWSE 2025</h3>
                     <p>A National Level Technical Symposium</p>
                 </div>

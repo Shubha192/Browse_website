@@ -533,6 +533,7 @@
 
 .cyber-modal.show {
     display: flex;
+    align-items: flex-start;
 }
 
 .cyber-modal-content {
@@ -546,6 +547,8 @@
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     overflow: hidden;
     animation: cyber-modal-pop 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .cyber-modal-bg {
