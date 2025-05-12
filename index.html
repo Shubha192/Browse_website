@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BROWSE 2025 - National Level Technical Symposium</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" honref="chatbot.css">
     <link rel="stylesheet" href="branch-animations.css">
     <link rel="stylesheet" href="cse-background.css">
     <link rel="stylesheet" href="robot-animation.css">
@@ -22,19 +22,34 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
-                <img src="img/sit-log.jpeg" alt="SIT Logo" style="height: 40px; margin-right: 12px;">
+                <img src="img/sit-log.jpeg" alt="SIT Logo" style="height: 100px; margin-right: 12px;">
                 <a href="#home" style="display: flex; align-items: center;">
-                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo" style="height: 40px;">
+                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo" style="height: 100px;">
                 </a>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#branches">Branches</a></li>
-                <li><a href="#register">Register</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#home" class="active">Home</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#home">Home Page</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#schedule">Event Schedule</a></li>
+                        <li><a href="#register">Registration</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#about">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#about">About Us Page</a></li>
+                        <li><a href="#branches">Branches</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#contact">Contact</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -105,6 +120,7 @@
             <div class="hero-buttons">
                 <a href="#register" class="btn btn-primary">Register Now</a>
                 <a href="#events" class="btn btn-secondary about-events-btn">About Events</a>
+                <a href="https://drive.google.com/file/d/1mMTZM6U3ZX3iK2Bj1pwOXebS3SAPbgLG/view?usp=drive_link" class="btn btn-primary" target="_blank">Click Here for Brochure</a>
             </div>
         </div>
         <div class="hero-visual">
@@ -182,7 +198,7 @@
                         <div id="byte-surge-animation" class="lottie-container"></div>
                     </div>
                     <h3>Byte Surge</h3>
-                    <a href="#" class="event-details">Explore</a>
+                    <a href="#" class="event-details" data-event="byte-surge">Explore</a>
                 </div>
             </div>
             <!-- UI/UX Print (NEW) -->
@@ -224,69 +240,76 @@
         <!-- Initialize Lottie Animations -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Cyber Etymology - Typewriter/Text Animation
+                // Cyber Etymology - Scrabble/Word Game Animation
                 lottie.loadAnimation({
                     container: document.getElementById('cyber-etymology-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Replace with typewriter/floating text animation
+                    path: 'https://assets5.lottiefiles.com/packages/lf20_2cwDXD.json' // Scrabble/word game animation
                 });
-                // Technical Quiz - Question Mark Animation
+
+                // Technical Quiz - Computer Technology Quiz Animation
                 lottie.loadAnimation({
                     container: document.getElementById('technical-quiz-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets4.lottiefiles.com/packages/lf20_ydo1amjm.json' // Question mark animation
+                    path: 'https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json' // Tech quiz animation
                 });
-                // Witty Byte - Tech Talk Animation
+
+                // Witty Byte - Tech Talk/Presentation Animation
                 lottie.loadAnimation({
                     container: document.getElementById('witty-byte-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets2.lottiefiles.com/packages/lf20_2ks3pjua.json' // Microphone or talk animation
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_1pxqjqps.json' // Tech talk animation
                 });
-                // Life Extension - Gaming Controller Animation
+
+                // Life Extension - Valorant & BGMI Gaming Animation
                 lottie.loadAnimation({
                     container: document.getElementById('life-extension-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets3.lottiefiles.com/packages/lf20_ydo1amjm.json' // Gaming controller animation
+                    path: 'https://assets5.lottiefiles.com/packages/lf20_5tl1xxnz.json' // Gaming animation
                 });
-                // Byte Surge - Coding Animation
+
+                // Byte Surge - C/C++ Programming Animation
                 lottie.loadAnimation({
                     container: document.getElementById('byte-surge-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Coding animation
+                    path: 'https://assets9.lottiefiles.com/packages/lf20_2cwDXD.json' // Programming animation
                 });
-                // UI/UX Print - Web Design Animation
+
+                // UI/UX Print - Web Design with AI Tools Animation
                 lottie.loadAnimation({
                     container: document.getElementById('uiux-print-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets2.lottiefiles.com/packages/lf20_1pxqjqps.json' // Web design animation
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_49rdyysj.json' // Web design with AI animation
                 });
-                // Pitchathon - Idea/Presentation Animation
+
+                // Pitchathon - Business Pitch/PPT Animation
                 lottie.loadAnimation({
                     container: document.getElementById('pitchathon-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets5.lottiefiles.com/packages/lf20_ydo1amjm.json' // Presentation animation
+                    path: 'https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json' // Business pitch animation
                 });
-                // Hyperthon - Hackathon Animation
+
+                // Hyperthon - 3-Hour Hackathon Animation
                 lottie.loadAnimation({
                     container: document.getElementById('hyperthon-animation'),
                     renderer: 'svg',
                     loop: true,
                     autoplay: true,
-                    path: 'https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json' // Hackathon animation
+                    path: 'https://assets2.lottiefiles.com/packages/lf20_1pxqjqps.json' // Hackathon animation
                 });
             });
         </script>
@@ -549,29 +572,57 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>08:00 AM - Registration</h3>
-                        <p>Pick up your event kits and participant badges</p>
+                        <h3>09:00 AM - Cyber Etymology</h3>
+                        <p>Explore the origins of technical terminology</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>09:00 AM - Inauguration</h3>
-                        <p>Opening ceremony with chief guests and dignitaries</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>10:00 AM - Technical Quiz</h3>
+                        <h3>09:00 AM - Technical Quiz</h3>
                         <p>First round of the quiz competition begins</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>11:30 AM - Cyber Etymology</h3>
-                        <p>Explore the origins of technical terminology</p>
+                        <h3>09:00 AM - Byte Surge</h3>
+                        <p>Programming competition kicks off</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>09:00 AM - Life Extension</h3>
+                        <p>Gaming competition featuring Valorant and BGMI</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>09:00 AM - Witty Byte</h3>
+                        <p>Technical talk competition begins</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>09:00 AM - Hyperthon</h3>
+                        <p>3-hour hackathon challenge starts</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>09:00 AM - UI/UX Print</h3>
+                        <p>Web design competition with AI tools</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>09:00 AM - Pitchathon</h3>
+                        <p>Business pitch competition begins</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -581,27 +632,6 @@
                         <p>Refreshment and networking</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>02:00 PM - Byte Surge</h3>
-                        <p>Programming competition kicks off</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>03:30 PM - Prastuti</h3>
-                        <p>Technical paper presentations begin</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>05:00 PM - Awards Ceremony</h3>
-                        <p>Recognition of winners and closing remarks</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -609,41 +639,45 @@
     <section id="branches" class="branches-section">
         <div class="container">
             <h2 class="section-title branches-title">Participating <span>Branches</span></h2>
-            <div class="branches-grid">
+            <div class="branches-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 2rem 0; max-width: 1200px; margin: 0 auto;">
                 <!-- CSE Branch Card -->
-                <div class="branch-card branch-cse">
+                <div class="branch-card" onclick="window.location.href='http://sit.ac.in/html/department.php?deptid=6'" style="height: 100%; min-height: 250px;">
                     <div class="branch-animation code-particles"></div>
                     <div class="branch-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Computer Science Engineering</h3>
+                    <h3>Computer Science</h3>
+                    <p>Department of Computer Science and Engineering</p>
                 </div>
                 
                 <!-- ISE Branch Card -->
-                <div class="branch-card branch-ise">
+                <div class="branch-card branch-ise" onclick="window.location.href='http://sit.ac.in/html/department.php?deptid=11'" style="height: 100%; min-height: 250px;">
                     <div class="branch-animation network-lines"></div>
                     <div class="branch-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Information Science Engineering</h3>
+                    <p>Department of Information Science and Engineering</p>
                 </div>
                 
                 <!-- AI&DS Branch Card -->
-                <div class="branch-card branch-aids">
+                <div class="branch-card branch-aids" onclick="window.location.href='http://sit.ac.in/html/department.php?deptid=21'" style="height: 100%; min-height: 250px;">
                     <div class="branch-animation data-viz"></div>
                     <div class="branch-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>AI & Data Science</h3>
+                    <p>Department of Artificial Intelligence & Data Science</p>
                 </div>
                 
                 <!-- CSE(AI&ML) Branch Card -->
-                <div class="branch-card branch-ai-ml">
+                <div class="branch-card branch-ai-ml" onclick="window.location.href='http://sit.ac.in/html/department.php?deptid=30'" style="height: 100%; min-height: 250px;">
                     <div class="branch-animation neural-network"></div>
                     <div class="branch-icon">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>CSE (AI & ML)</h3>
+                    <p>Department of CSE Artificial Intelligence & Machine Learning</p>
                 </div>
             </div>
         </div>
@@ -666,41 +700,13 @@
                         </div>
                         <div class="info-item">
                             <i class="fas fa-ticket-alt"></i>
-                            <span>Registration Fee: ₹500 per team</span>
+                            <span>Registration Fee: ₹50 per person</span>
                         </div>
                     </div>
                 </div>
-                <div class="register-form">
-                    <form id="registration-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder="Full Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder="Email Address">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="college" name="college" required placeholder="College/University">
-                        </div>
-                        <div class="form-group">
-                            <select id="event" name="event" required style="color: black;">
-                                <option value="" disabled selected>Select Event</option>
-                                <option value="byte-surge">Byte Surge</option>
-                                <option value="cyber-etymology">Cyber Etymology</option>
-                                <option value="life-extension">Life Extension</option>
-                                <option value="technical-quiz">Technical Quiz</option>
-                                <option value="prastuti">Prastuti</option>
-                                <option value="tech-innovate">Tech Innovate</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Register</button>
-                    </form>
-                </div>
             </div>
             <div class="registration-qr">
-                <img src="img/qr-code.png" alt="Registration QR Code">
+                <img src="img/qr-code.jpeg" alt="Registration QR Code">
                 <p>Scan to register instantly</p>
             </div>
         </div>
@@ -710,31 +716,34 @@
         <div class="container">
             <h2 class="section-title">Coordinators</h2>
             <div class="coordinators-grid" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                <div class="coordinator-card" style="min-width: 300px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 300px; max-width: 350px;">
                     <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">PATRONS</h3>
                     <div style="margin-bottom: 1rem;">
                         Prof. SHIVAKUMARAIAH<br>CEO<br><br>
                         Prof. S V DINESH<br>PRINCIPAL
                     </div>
                 </div>
-                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                <div class="coordinator-card" style="min-width: 300px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 300px; max-width: 350px;">
                     <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">PRESIDENT</h3>
                     <div style="margin-bottom: 1rem;">
                         Prof. N R SUNITHA<br>HOD, CSE
                     </div>
                 </div>
-                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                <div class="coordinator-card" style="min-width: 300px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 300px; max-width: 350px;">
                     <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">VICE-PRESIDENT</h3>
                     <div style="margin-bottom: 1rem;">
                         Prof. R APARNA<br>HOD, ISE
                     </div>
                 </div>
-                <div class="coordinator-card" style="min-width: 260px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 260px; max-width: 320px;">
+                <div class="coordinator-card" style="min-width: 300px; background: rgba(255,255,255,0.04); border-radius: 16px; padding: 1.5rem; flex: 1 1 300px; max-width: 350px;">
                     <h3 style="color: #00FFF7; font-family: 'Orbitron', sans-serif; letter-spacing: 1px;">STUDENT CO-ORDINATORS</h3>
-                    <div style="margin-bottom: 1rem;">
-                        TUSHAR M SAGUR: 99724 01255<br>
-                        ABRAR AZEEM: 88677 37265<br>
-                        TARUN R: 99729 09371
+                    <div style="margin-bottom: 1rem; display: grid; grid-template-columns: auto auto; gap: 1rem; align-items: center;">
+                        <span>TUSHAR M SAGUR:</span>
+                        <span>99724 01255</span>
+                        <span>ABRAR AZEEM:</span>
+                        <span>88677 37265</span>
+                        <span>TARUN R:</span>
+                        <span>99729 09371</span>
                     </div>
                 </div>
             </div>
@@ -744,8 +753,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact <span>Us</span></h2>
-            <div class="contact-content" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-                <div class="contact-info" style="flex: 1 1 300px;">
+            <div class="contact-content" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: space-between;">
+                <div class="contact-info" style="flex: 1 1 300px; min-width: 300px;">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
@@ -756,7 +765,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-info" style="flex: 1 1 300px;">
+                <div class="contact-info" style="flex: 1 1 300px; min-width: 300px;">
+                    <div class="contact-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>Student Coordinators</h3>
+                            <p>TUSHAR M SAGUR: 99724 01255</p>
+                            <p>ABRAR AZEEM: 88677 37265</p>
+                            <p>TARUN R: 99729 09371</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info" style="flex: 1 1 300px; min-width: 300px;">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -774,7 +794,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo">
+                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo" style="height: 100px;">
                     <h3>BROWSE 2025</h3>
                     <p>A National Level Technical Symposium</p>
                 </div>
@@ -790,14 +810,6 @@
                         <li><a href="#sponsors">Sponsors</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe to our newsletter for the latest updates on BROWSE 2025.</p>
-                    <form id="newsletter-form">
-                        <input type="email" placeholder="Your Email Address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -841,5 +853,99 @@
     <script src="cse-background.js"></script>
     <script src="robot-animation.js"></script>
     <script src="events-animations.js"></script>
+
+    <style>
+        .branches-section {
+            padding: 4rem 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 2rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .branch-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: visible;
+        }
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 255, 247, 0.2);
+        }
+        .branch-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #00FFF7;
+        }
+        .branch-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .branch-card p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .branches-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .cse-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+        }
+        .code-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+        .code-particles::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, transparent 0%, rgba(0, 255, 247, 0.1) 50%, transparent 100%),
+                repeating-linear-gradient(0deg, transparent 0%, transparent 50%, rgba(0, 255, 247, 0.1) 50%, rgba(0, 255, 247, 0.1) 100%);
+            background-size: 200% 200%, 100% 4px;
+            animation: codeFlow 20s linear infinite;
+        }
+        @keyframes codeFlow {
+            0% {
+                background-position: 200% 0, 0 0;
+            }
+            100% {
+                background-position: -200% 0, 0 0;
+            }
+        }
+    </style>
 </body>
 </html> 

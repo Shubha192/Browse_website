@@ -52,21 +52,31 @@ function initNavbar() {
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li');
     const header = document.querySelector('.header');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    // Toggle mobile menu
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Handle dropdowns on mobile
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            }
         });
-    }
+    });
 
-    // Close mobile menu when clicking on a link
-    links.forEach(link => {
-        link.addEventListener('click', () => {
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
-        });
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        }
     });
 
     // Add shadow to header on scroll
