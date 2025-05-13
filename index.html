@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" honref="chatbot.css">
     <link rel="stylesheet" href="branch-animations.css">
-    <link rel="stylesheet" href="cse-background.css">
     <link rel="stylesheet" href="robot-animation.css">
     <link rel="stylesheet" href="events-animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- CSE Themed Background Animation Container -->
-    <div class="cse-background"></div>
-    
     <header class="header">
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
@@ -804,8 +800,8 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p>browse2025@sit.ac.in</p>
-                            <p>info.browse2025@sit.ac.in</p>
+                            <p>browse@sit.ac.in</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -838,7 +834,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 BROWSE - Siddaganga Institute of Technology. All rights reserved.</p>
                 <div class="footer-credits">
-                    <p>Designed with <i class="fas fa-heart"></i> by SIT Tech Team</p>
+                    <p>Designed by 6th Sem AI&DS Students,SIT </p>
                 </div>
             </div>
         </div>
@@ -846,7 +842,6 @@
 
     <script src="script.js"></script>
     <script src="branch-animations.js"></script>
-    <script src="cse-background.js"></script>
     <script src="robot-animation.js"></script>
     <script src="events-animations.js"></script>
 
@@ -903,43 +898,6 @@
         @media (max-width: 768px) {
             .branches-grid {
                 grid-template-columns: 1fr;
-            }
-        }
-        .cse-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
-        }
-        .code-particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-        }
-        .code-particles::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(90deg, transparent 0%, rgba(0, 255, 247, 0.1) 50%, transparent 100%),
-                repeating-linear-gradient(0deg, transparent 0%, transparent 50%, rgba(0, 255, 247, 0.1) 50%, rgba(0, 255, 247, 0.1) 100%);
-            background-size: 200% 200%, 100% 4px;
-            animation: codeFlow 20s linear infinite;
-        }
-        @keyframes codeFlow {
-            0% {
-                background-position: 200% 0, 0 0;
-            }
-            100% {
-                background-position: -200% 0, 0 0;
             }
         }
     </style>
