@@ -17,11 +17,9 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo" style="display: flex; align-items: center;">
-                <img src="img/sit-log.jpeg" alt="SIT Logo" style="height: 100px; margin-right: 12px;">
-                <a href="#home" style="display: flex; align-items: center;">
-                    <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo" style="height: 100px;">
-                </a>
+            <div class="logo-flex">
+                <img src="img/sit-log.jpeg" alt="SIT Logo" class="logo-img sit-logo">
+                <img src="img/BROWSE 2025 Logo.jpeg" alt="BROWSE 2025 Logo" class="logo-img browse-logo">
             </div>
             <div class="hamburger" id="hamburger-menu">
                 <span></span>
@@ -52,7 +50,8 @@
                     </ul>
                 </li>
             </ul>
-            <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-dropdown" id="mobile-nav">
+                <button class="close-mobile-nav" id="close-mobile-nav">&times;</button>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#events">Events</a>
@@ -941,12 +940,11 @@
                 padding: 0 0.5rem;
                 text-align: center;
             }
-            .glitch-text, .glitch-text-prize {
-                font-size: 2rem !important;
-                word-break: break-word;
-            }
-            .event-date {
-                font-size: 1.1rem;
+            .glitch-text, .glitch-text-prize, .event-date {
+                text-align: center;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
             .prize-pool-animated {
                 font-size: 1.1rem !important;
@@ -954,27 +952,56 @@
             }
             /* Countdown timer */
             .countdown-container {
-                flex-direction: column !important;
+                flex-direction: row !important;
+                justify-content: center;
                 align-items: center;
                 gap: 0.5rem;
+                width: 100%;
+                max-width: 98vw;
+                margin: 0.7rem auto 0.7rem auto;
             }
             .countdown-item {
-                min-width: 80px;
-                font-size: 1rem;
+                flex: 1 1 0;
+                min-width: 0;
+                max-width: none;
+                font-size: 1.25rem;
+                padding: 0.7rem 0.2rem;
+                margin: 0 0.1rem;
+            }
+            .countdown-item span#days,
+            .countdown-item span#hours,
+            .countdown-item span#minutes,
+            .countdown-item span#seconds {
+                font-size: 1.7rem;
+                font-weight: bold;
+                letter-spacing: 1px;
             }
             .countdown-label {
                 font-size: 0.9rem;
             }
             /* Hero buttons */
             .hero-buttons {
-                flex-direction: column !important;
-                gap: 0.7rem !important;
-                align-items: center;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: stretch;
+                gap: 0.5rem !important;
+                width: 100%;
+                margin: 1rem 0 0 0;
             }
             .hero-buttons .btn {
-                width: 90vw;
-                max-width: 320px;
-                font-size: 1rem;
+                position: relative;
+                z-index: 2;
+                min-height: 48px;
+                padding: 1rem 0.2rem;
+                flex-shrink: 0;
+                min-width: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .hero-buttons {
+                overflow: visible !important;
+                min-height: unset !important;
             }
             /* Section padding */
             section, .container {
@@ -998,8 +1025,27 @@
                 align-items: center;
             }
             .coordinator-card {
-                min-width: unset !important;
-                max-width: 100vw !important;
+                width: 80% !important;
+                min-height: 150px !important;
+                padding: 0.8rem 0.7rem !important;
+                margin: 0 auto 0.7rem auto !important;
+                box-sizing: border-box;
+                border-radius: 1rem;
+                background: rgba(255,255,255,0.04);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            .coordinator-card h3 {
+                font-size: 1rem !important;
+                margin-bottom: 0.5rem !important;
+                line-height: 1.15 !important;
+            }
+            .coordinator-card div, .coordinator-card span {
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+                word-break: break-word;
+                width: 100%;
             }
             /* Contact section */
             .contact-content {
@@ -1022,6 +1068,107 @@
                 padding-left: 0 !important;
             }
         }
+        .logo-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            width: 100%;
+            margin: 0 auto 0.5rem auto;
+            padding: 0.5rem 0;
+        }
+        .logo-img {
+            max-width: 120px;
+            height: auto;
+            display: block;
+            background: #fff0;
+        }
+        @media (max-width: 768px) {
+            .logo-flex {
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+                gap: 0.5rem;
+                width: auto;
+                margin: 0 0 0 0.5rem;
+                padding: 0.5rem 0 0.5rem 0;
+            }
+            .logo-img {
+                max-width: 18vw;
+                min-width: 40px;
+                height: auto;
+                margin: 0;
+            }
+            /* Center all hero text content */
+            .hero-content, .glitch-text, .glitch-text-prize, .event-date, .prize-pool-animated {
+                text-align: center !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+            /* Countdown timer: horizontal, big numbers, even spacing */
+            .countdown-container {
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                width: 100%;
+                max-width: 98vw;
+                margin: 0.7rem auto 0.7rem auto;
+            }
+            .countdown-item {
+                flex: 1 1 0;
+                min-width: 0;
+                max-width: none;
+                font-size: 1.1rem;
+                padding: 0.7rem 0.2rem;
+                margin: 0 0.1rem;
+                background: rgba(0,0,0,0.2);
+                border-radius: 8px;
+                text-align: center;
+            }
+            .countdown-item span#days,
+            .countdown-item span#hours,
+            .countdown-item span#minutes,
+            .countdown-item span#seconds {
+                font-size: 2.1rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                display: block;
+                line-height: 1.1;
+            }
+            .countdown-label {
+                font-size: 1rem;
+                margin-top: 0.2rem;
+                display: block;
+            }
+            /* Hero buttons: visible, not clipped, consistent size, good spacing */
+            .hero-buttons {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                align-items: stretch;
+                gap: 0.7rem !important;
+                width: 100%;
+                margin: 1rem 0 0 0;
+            }
+            .hero-buttons .btn {
+                position: relative;
+                z-index: 2;
+                min-height: 48px;
+                padding: 1rem 0.2rem;
+                flex-shrink: 0;
+                min-width: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .hero-buttons {
+                overflow: visible !important;
+                min-height: unset !important;
+            }
+        }
+        /* Hamburger menu as dropdown overlay */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -1041,51 +1188,48 @@
             border-radius: 2px;
             transition: 0.3s;
         }
-        .mobile-nav {
+        .mobile-nav-dropdown {
             display: none;
             position: fixed;
             top: 0;
             right: 0;
-            height: 100vh;
-            width: 220px;
+            left: 0;
             background: rgba(20, 20, 30, 0.98);
-            box-shadow: -2px 0 16px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.2);
             flex-direction: column;
-            align-items: flex-start;
-            padding: 80px 24px 24px 24px;
+            align-items: center;
+            padding: 80px 0 24px 0;
             z-index: 1001;
-            transition: transform 0.3s ease;
-            transform: translateX(100%);
+            transition: all 0.3s ease;
+            width: 100vw;
+            height: auto;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
         }
-        .mobile-nav.open {
+        .mobile-nav-dropdown.open {
             display: flex;
-            transform: translateX(0);
         }
-        .mobile-nav a {
+        .mobile-nav-dropdown a {
             color: #00FFF7;
             text-decoration: none;
             font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+            margin: 0.7rem 0;
             width: 100%;
+            text-align: center;
             font-weight: 600;
         }
+        .close-mobile-nav {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1003;
+        }
         @media (max-width: 768px) {
-            .header .navbar {
-                flex-direction: column;
-                align-items: center;
-            }
-            .header .navbar .logo {
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center;
-                width: 100%;
-                margin-bottom: 0.5rem;
-            }
-            .header .navbar .logo img,
-            .header .navbar .logo a img {
-                height: 64px !important;
-                margin: 0 0 8px 0 !important;
-            }
             .nav-links {
                 display: none !important;
             }
@@ -1095,38 +1239,42 @@
                 top: 24px;
                 right: 24px;
             }
-            .mobile-nav {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-top: 80px;
-            }
-            .mobile-nav:not(.open) {
+            .mobile-nav-dropdown {
                 display: none;
             }
-            /* Countdown timer vertical */
-            .countdown-container {
-                flex-direction: column !important;
-                align-items: center;
-                gap: 0.5rem;
+            .mobile-nav-dropdown.open {
+                display: flex;
             }
-            .countdown-item {
-                min-width: 80px;
-                font-size: 1rem;
+            .hero-buttons .btn {
+                pointer-events: auto !important;
+                z-index: 3 !important;
             }
-            .countdown-label {
-                font-size: 0.9rem;
+        }
+        /* Poster image responsive */
+        .about-image img, .register-content img, .event-poster {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .about-image img, .register-content img, .event-poster {
+                max-width: 95vw;
+                margin: 0 auto;
             }
-            /* Prevent horizontal scroll */
-            html, body {
-                max-width: 100vw;
-                overflow-x: hidden;
-            }
-            /* Padding for all sections */
-            section, .container {
-                padding-left: 0.5rem !important;
-                padding-right: 0.5rem !important;
-            }
+        }
+        /* General content width */
+        body, html {
+            width: 100vw;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        .container, section {
+            width: 100%;
+            max-width: 100vw;
+            margin: 0 auto;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
         }
         /* --- ABOUT SECTION --- */
         .about-content {
@@ -1163,20 +1311,24 @@
                 align-items: center;
                 justify-content: center;
             }
-            .about-text {
-                padding: 0 0.5rem;
-                text-align: center;
-            }
             .about-image {
+                order: -1;
                 width: 100%;
                 justify-content: center;
                 align-items: center;
+                margin-bottom: 0.5rem;
             }
             .about-image img {
-                max-width: 90vw;
-                height: auto;
+                max-width: 95vw;
                 margin: 0 auto;
                 display: block;
+                height: auto;
+            }
+            .about-text {
+                padding: 0 0.5rem;
+                text-align: center;
+                font-size: 1.05rem;
+                margin-bottom: 0.5rem;
             }
             .section-title {
                 font-size: 1.6rem;
@@ -1188,13 +1340,81 @@
                 padding-right: 0.5rem !important;
             }
         }
+        /* Coordinators section responsive styles */
+        .coordinators-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1.2rem !important;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .coordinator-card {
+            width: 100% !important;
+            box-sizing: border-box;
+            margin: 0 0 1.2rem 0 !important;
+            padding: 1.2rem 1rem !important;
+            border-radius: 0;
+            background: rgba(255,255,255,0.04);
+        }
+        .coordinator-card h3 {
+            font-size: 1.15rem !important;
+            margin-bottom: 0.7rem !important;
+            line-height: 1.2 !important;
+        }
+        .coordinator-card div, .coordinator-card span {
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+            word-break: break-word;
+            width: 100%;
+        }
+        /* Contact section responsive styles */
+        .contact-content {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1rem !important;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contact-info {
+            width: 100% !important;
+            box-sizing: border-box;
+            margin: 0 0 1rem 0 !important;
+            padding: 1.2rem 1rem 1.2rem 1rem !important;
+            border-radius: 0;
+            background: rgba(255,255,255,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .contact-info h3, .contact-info p {
+            text-align: left !important;
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+            word-break: break-word;
+            width: 100%;
+        }
+        .contact-info i {
+            font-size: 1.4rem !important;
+            margin-bottom: 0.5rem !important;
+        }
     </style>
     <script>
-        // Hamburger menu toggle
+        // Hamburger menu toggle for dropdown overlay
         const hamburger = document.getElementById('hamburger-menu');
         const mobileNav = document.getElementById('mobile-nav');
+        const closeMobileNav = document.getElementById('close-mobile-nav');
         hamburger.addEventListener('click', function() {
-            mobileNav.classList.toggle('open');
+            mobileNav.classList.add('open');
+        });
+        closeMobileNav.addEventListener('click', function() {
+            mobileNav.classList.remove('open');
         });
         // Optional: Close menu when a link is clicked
         Array.from(mobileNav.getElementsByTagName('a')).forEach(link => {
