@@ -988,84 +988,23 @@
                 gap: 0.5rem !important;
                 width: 100%;
                 margin: 1rem 0 0 0;
+                overflow-x: auto;
             }
             .hero-buttons .btn {
-                position: relative;
-                z-index: 2;
-                min-height: 48px;
-                padding: 1rem 0.2rem;
-                flex-shrink: 0;
+                flex: 1 1 0;
                 min-width: 0;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .hero-buttons {
-                overflow: visible !important;
-                min-height: unset !important;
-            }
-            /* Section padding */
-            section, .container {
-                padding-left: 0.5rem !important;
-                padding-right: 0.5rem !important;
-            }
-            /* About image */
-            .about-image img {
-                max-width: 100%;
-                height: auto;
-            }
-            /* Branches grid */
-            .branches-grid {
-                grid-template-columns: 1fr !important;
-                gap: 1rem !important;
-            }
-            /* Coordinator cards */
-            .coordinators-grid {
-                flex-direction: column !important;
-                gap: 1rem !important;
-                align-items: center;
-            }
-            .coordinator-card {
-                width: 80% !important;
-                min-height: 150px !important;
-                padding: 0.8rem 0.7rem !important;
-                margin: 0 auto 0.7rem auto !important;
-                box-sizing: border-box;
-                border-radius: 1rem;
-                background: rgba(255,255,255,0.04);
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-            }
-            .coordinator-card h3 {
-                font-size: 1rem !important;
-                margin-bottom: 0.5rem !important;
-                line-height: 1.15 !important;
-            }
-            .coordinator-card div, .coordinator-card span {
-                font-size: 0.95rem !important;
-                line-height: 1.4 !important;
-                word-break: break-word;
-                width: 100%;
-            }
-            /* Contact section */
-            .contact-content {
-                flex-direction: column !important;
-                gap: 1rem !important;
-            }
-            .contact-info {
-                min-width: unset !important;
-            }
-            /* Footer */
-            .footer-content {
-                flex-direction: column !important;
-                align-items: center;
+                max-width: 33vw;
+                font-size: 1rem;
+                padding: 0.8rem 0.2rem;
+                margin: 0;
+                border-radius: 2rem;
                 text-align: center;
-            }
-            .footer-logo img {
-                height: 64px !important;
-            }
-            .footer-links ul {
-                padding-left: 0 !important;
+                white-space: normal;
+                word-break: break-word;
+                box-sizing: border-box;
+                height: auto;
+                line-height: 1.2;
+                overflow: hidden;
             }
         }
         .logo-flex {
@@ -1354,21 +1293,18 @@
         .coordinator-card {
             width: 100% !important;
             box-sizing: border-box;
-            margin: 0 0 1.2rem 0 !important;
             padding: 1.2rem 1rem !important;
-            border-radius: 0;
+            margin: 0 0 1rem 0 !important;
+            border-radius: 0 !important;
             background: rgba(255,255,255,0.04);
+            display: block !important;
+            text-align: center !important;
         }
-        .coordinator-card h3 {
-            font-size: 1.15rem !important;
-            margin-bottom: 0.7rem !important;
-            line-height: 1.2 !important;
-        }
-        .coordinator-card div, .coordinator-card span {
+        .coordinator-card h3, .coordinator-card div, .coordinator-card span {
+            text-align: center !important;
             font-size: 1rem !important;
             line-height: 1.5 !important;
             word-break: break-word;
-            width: 100%;
         }
         /* Contact section responsive styles */
         .contact-content {
