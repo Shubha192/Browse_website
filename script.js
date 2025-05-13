@@ -48,16 +48,8 @@ function bindModal(openSelector, modalSelector, closeSelector) {
 
 // Mobile Navigation Toggle
 function initNavbar() {
-    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links li');
-    const header = document.querySelector('.header');
     const dropdowns = document.querySelectorAll('.dropdown');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
 
     // Handle dropdowns on mobile
     dropdowns.forEach(dropdown => {
@@ -70,17 +62,9 @@ function initNavbar() {
         });
     });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
-        }
-    });
-
     // Add shadow to header on scroll
     window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
@@ -136,13 +120,16 @@ function initCountdown() {
         document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
         document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
         
-        // If the countdown is finished, display expired text
+        // If the countdown is finished, display "Event Live"
         if (distance < 0) {
             clearInterval(timer);
-            document.getElementById("days").innerHTML = "00";
-            document.getElementById("hours").innerHTML = "00";
-            document.getElementById("minutes").innerHTML = "00";
-            document.getElementById("seconds").innerHTML = "00";
+            const countdownContainer = document.querySelector('.countdown-container');
+            countdownContainer.innerHTML = `
+                <div class="event-live">
+                    <h2>Event Live!</h2>
+                    <p>BROWSE 2025 is now in progress</p>
+                </div>
+            `;
         }
     }, 1000);
 }
